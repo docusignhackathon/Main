@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
+import groceries from './../../../dummyData.js';
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      groceries,
+    };
 
   }
-
-
   render() {
     return (
       <div>
