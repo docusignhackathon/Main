@@ -11,7 +11,7 @@ export default [
   },
   {
     id: 3,
-    name: 'wine',
+    name: 'kombucha',
     quantity: 2,
   },
   {
@@ -26,7 +26,7 @@ export default [
   },
   {
     id: 6,
-    name: 'pizza',
-    quantity: 1,
+    name: 'egg rolls',
+    quantity: 100,
   }
 ];
