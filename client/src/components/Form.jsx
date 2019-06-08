@@ -14,7 +14,7 @@ class Form extends React.Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    console.log('STATE BEFORE SENDING ', this.state);
+    // console.log('STATE BEFORE SENDING ', this.state);
     this.props.addInfo(this.state);
   }
 

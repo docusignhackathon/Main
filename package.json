@@ -1,5 +1,5 @@
 {
-  "name": "hackreactor-groceries",
+  "name": "Green Action",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,6 @@
     "react-dev": "webpack -d --watch",
     "start": "nodemon server/index.js"
   },
-  "author": "Beth Johnson",
-  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
