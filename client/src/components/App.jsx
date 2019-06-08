@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
     this.state = {
       zipcode: 1,
-
+      category: ''
     };
 
     this.addZip = this.addZip.bind(this);

@@ -28,11 +28,12 @@ class Form extends React.Component {
         onSubmit={this.handleSubmit}
       >
         <label> Category
-          <input
-            name="category"
-            value={this.state.category}
-            onChange={this.handleChange}
-          />
+        <select>
+          <option>Forest</option>
+          <option>Land</option>
+          <option>Climate</option>
+          <option>Earth</option>
+        </select>
         </label>
         <label> Zipcode
           <input
