@@ -21,6 +21,8 @@
     "webpack-cli": "3"
   },
   "dependencies": {
+    "docusign-esign": "^4.3.0",
+    "dotenv": "^8.0.0",
     "express": "4",
     "lodash": "4",
     "mysql": "2",
