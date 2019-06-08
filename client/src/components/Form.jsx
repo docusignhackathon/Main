@@ -10,16 +10,21 @@ class Form extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
   handleSubmit(event) {
     event.preventDefault();
     this.props.addZip(this.state);
   }
 
+  handleSelect(evt) {
+    console.log('SELECTED');
+  }
   handleChange(event) {
     const newState = {};
     newState[event.target.name] = event.target.value;
     this.setState(newState);
+    // console.log(this.state.zipcode);
   }
 
   render() {
@@ -28,7 +33,7 @@ class Form extends React.Component {
         onSubmit={this.handleSubmit}
       >
         <label> Category
-        <select>
+        <select onChange = {this.handleSelect}>
           <option>Forest</option>
           <option>Land</option>
           <option>Climate</option>
@@ -37,7 +42,7 @@ class Form extends React.Component {
         </label>
         <label> Zipcode
           <input
-            category="zipcode"
+            name="zipcode"
             value={this.state.zipcode}
             onChange={this.handleChange}
           />
