@@ -14,17 +14,23 @@ class Form extends React.Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    this.props.addZip(this.state);
+    console.log('STATE BEFORE SENDING ', this.state);
+    this.props.addInfo(this.state);
   }
 
   handleSelect(evt) {
-    console.log('SELECTED');
+    console.log(evt.target.value);
+    let selectedCategory = evt.target.value;
+    this.state.category = selectedCategory;
+    this.setState({
+      category: selectedCategory
+    });
+    console.log(this.state);
   }
   handleChange(event) {
     const newState = {};
     newState[event.target.name] = event.target.value;
     this.setState(newState);
-    // console.log(this.state.zipcode);
   }
 
   render() {

@@ -9,20 +9,20 @@ class App extends Component {
       zipcode: 1,
       category: ''
     };
-
-    this.addZip = this.addZip.bind(this);
+    this.addInfo = this.addInfo.bind(this);
   }
 
-  addZip(zip) {
+  addInfo(info) {
     this.setState({
-      zipcode: this.state.zipcode.concat(zip),
+      zipcode: info.zipcode,
+      category: info.category
     });
   }
   render() {
     return (
       <div>
         <h1>Get Involved!</h1>
-        <Form addZip={this.addZip}/>
+        <Form addInfo={this.addInfo}/>
       </div>);
   }
 }
