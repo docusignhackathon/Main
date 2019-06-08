@@ -66,7 +66,7 @@ async function SigningCeremony (req, res) {
                                       // https://developers.docusign.com/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient
 
   // The document to be signed. Path is relative to the root directory of this repo.
-  const fileName = 'demo_documents/World_Wide_Corp_lorem.pdf';
+  const fileName = 'demo_documents/Mock Up Docusign.pdf';
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -100,7 +100,7 @@ async function SigningCeremony (req, res) {
   // Create the signHere tab to be placed on the envelope
   const signHere = docusign.SignHere.constructFromObject({documentId: '1',
           pageNumber: '1', recipientId: '1', tabLabel: 'SignHereTab',
-          xPosition: '195', yPosition: '147'});
+          xPosition: '550', yPosition: '1125'});
 
   // Create the overall tabs object for the signer and add the signHere tabs array
   // Note that tabs are relative to receipients/signers.
@@ -133,7 +133,7 @@ async function SigningCeremony (req, res) {
     const envelopeId = results.envelopeId
         , recipientViewRequest = docusign.RecipientViewRequest.constructFromObject({
             authenticationMethod: authenticationMethod, clientUserId: clientUserId,
-            recipientId: '1', returnUrl: baseUrl + '/dsreturn',
+            recipientId: '1', returnUrl: baseUrl,
             userName: signerName, email: signerEmail
           })
         ;

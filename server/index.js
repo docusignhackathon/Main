@@ -22,12 +22,6 @@ app.post('/groceries', (req, res) => {
 });
 
 app.post('/docusign', SigningCeremony);
-app.get('/docusign', (req, res) => {
-  res.send(`<html lang="en"><body><form action="${req.url}" method="post">
-   <input type="submit" value="Sign the document!"
-    style="width:13em;height:2em;background:#1f32bb;color:white;font:bold 1.5em arial;margin: 3em;"/>
-   </form></body>`)
-});
 app.get('/dsreturn', (req, res) => {
   res.send(`<html lang="en"><body><p>The signing ceremony was completed with
     status ${req.query.event}</p><p>This page can also implement post-signing processing.</p></body>`)
