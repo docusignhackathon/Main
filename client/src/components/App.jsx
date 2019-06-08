@@ -1,34 +1,28 @@
 import React, { Component } from 'react';
 
 import Form from './Form.jsx';
-import GroceryList from './GroceryList.jsx';
-
-import groceries from './../../../dummyData.js';
-
-let id = 7;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      groceries,
+      zipcode: 1,
+
     };
 
-    this.addGrocery = this.addGrocery.bind(this);
+    this.addZip = this.addZip.bind(this);
   }
 
-  addGrocery(grocery) {
-    grocery.id = id++;
+  addZip(zip) {
     this.setState({
-      groceries: this.state.groceries.concat(grocery),
+      zipcode: this.state.zipcode.concat(zip),
     });
   }
   render() {
     return (
       <div>
-        <h1>Grocery List</h1>
-        <Form addGrocery={this.addGrocery}/>
-        <GroceryList groceries={this.state.groceries} />
+        <h1>Get Involved!</h1>
+        <Form addZip={this.addZip}/>
       </div>);
   }
 }

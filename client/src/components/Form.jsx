@@ -4,8 +4,8 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      quantity: 1,
+      category: '',
+      zipcode: 1
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -13,7 +13,7 @@ class Form extends React.Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    this.props.addGrocery(this.state);
+    this.props.addZip(this.state);
   }
 
   handleChange(event) {
@@ -27,17 +27,17 @@ class Form extends React.Component {
       <form
         onSubmit={this.handleSubmit}
       >
-        <label> Name
+        <label> Category
           <input
-            name="name"
-            value={this.state.name}
+            name="category"
+            value={this.state.category}
             onChange={this.handleChange}
           />
         </label>
-        <label> Quantity
+        <label> Zipcode
           <input
-            name="quantity"
-            value={this.state.quantity}
+            category="zipcode"
+            value={this.state.zipcode}
             onChange={this.handleChange}
           />
         </label>
