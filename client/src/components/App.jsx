@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Form from './Form.jsx';
+import DocuSign from './DocuSign.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
       <div>
         <h1>Get Involved!</h1>
         <Form addInfo={this.addInfo}/>
+        <DocuSign />
       </div>);
   }
 }
