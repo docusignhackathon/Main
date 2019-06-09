@@ -44,7 +44,7 @@ class Form extends React.Component {
           )}
         </select>
         </label>
-        <label> Zipcode
+        <label> Location
           <input
             name="zipcode"
             value={this.state.zipcode}
