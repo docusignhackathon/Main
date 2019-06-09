@@ -1,4 +1,4 @@
   flask
-  nltk==3.4.2
-  newsapi
+  nltk
+  newsapi-python
   flask_cors
