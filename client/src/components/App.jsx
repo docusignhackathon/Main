@@ -40,10 +40,15 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div class="text-center">
         <h1>Get Involved!</h1>
-        <Form addInfo={this.addInfo}/>
-        <News articles={this.state.newsArticles} category={this.state.category} />
+        <div class="text-center">
+          <Form addInfo={this.addInfo}/>
+        </div>
+        <div class="text-center">
+
+          <News articles={this.state.newsArticles} category={this.state.category} />
+        </div>
         <DocuSign category={this.state.category} />
       </div>);
   }

@@ -1,14 +1,14 @@
 import React, { useLayoutEffect, useState } from 'react';
 
-const News = ({ category, articles }) => {
+const News = ({ category, zipcode, articles }) => {
   const [newsArticles, setNewsArticles] = useState([]);
   useLayoutEffect(() => {
-    fetch(`http://1d70a7fb.ngrok.io/news?category=${category}&location=California`)
+    fetch(`http://512ad1af.ngrok.io/news?category=${category}&location=California`)
       .then(response => response.json()).then(setNewsArticles);
   });
 
   return (
-    <table className="px-md-5 table table-striped table-hover table-sm w-50 p-3">
+    <table className="table table-striped text-center">
       <thead>
         <tr>
           {['Title', 'Summary', 'Author', 'Sentiment', 'URL'].map(header =>
