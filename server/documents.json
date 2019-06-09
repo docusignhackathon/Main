@@ -24,26 +24,26 @@
     ]
   },
   "Climate": {
-    "fileName": "document_files/World_Wide_Corp_lorem.pdf",
+    "fileName": "document_files/Mockup Docusign Renewable Energy.pdf",
     "emailSubject": "Please sign the Climate Petition!",
     "emailBlurb": "Please sign the Climate Petition!",
     "signHereTabs": [
       {
         "tabLabel": "SignHereTab",
-        "xPosition": 195,
-        "yPosition": 147
+        "xPosition": 550,
+        "yPosition": 1125
       }
     ]
   },
   "Earth": {
-    "fileName": "document_files/World_Wide_Corp_lorem.pdf",
+    "fileName": "document_files/Mockup Docusign Climate Pollution.pdf",
     "emailSubject": "Please sign the Earth Petition!",
     "emailBlurb": "Please sign the Earth Petition!",
     "signHereTabs": [
       {
         "tabLabel": "SignHereTab",
-        "xPosition": 195,
-        "yPosition": 147
+        "xPosition": 550,
+        "yPosition": 1125
       }
     ]
   }

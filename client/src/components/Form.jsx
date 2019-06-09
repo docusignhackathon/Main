@@ -5,7 +5,8 @@ class Form extends React.Component {
     super(props);
     this.state = {
       category: '',
-      zipcode: 1
+      zipcode: 1,
+      options: ['Forest', 'Land', 'Climate', 'Earth']
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,15 +23,15 @@ class Form extends React.Component {
     console.log(evt.target.value);
     let selectedCategory = evt.target.value;
     this.state.category = selectedCategory;
-    this.setState({
-      category: selectedCategory
-    });
+    this.setState(
+      Object.assign({}, this.state, { category: selectedCategory })
+    );
     console.log(this.state);
   }
   handleChange(event) {
     const newState = {};
     newState[event.target.name] = event.target.value;
-    this.setState(newState);
+    this.setState(Object.assign({}, this.state, newState));
   }
 
   render() {
@@ -38,7 +39,7 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label> Category
         <select onChange = {this.handleSelect}>
-          {['Forest', 'Land', 'Climate', 'Earth'].map(option =>
+          {this.state.options.map(option =>
             <option key={option}>{option}</option>
           )}
         </select>

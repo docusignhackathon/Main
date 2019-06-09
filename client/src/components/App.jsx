@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Form from './Form.jsx';
 import DocuSign from './DocuSign.jsx';
+import News from './News.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class App extends Component {
         <h1>Get Involved!</h1>
         <Form addInfo={this.addInfo}/>
         <DocuSign category={this.state.category} />
+        <News category={this.state.category} />
       </div>);
   }
 }

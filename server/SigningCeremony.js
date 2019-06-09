@@ -70,7 +70,7 @@ async function SigningCeremony (body, res) {
       documentId: '1',
       pageNumber: '1',
       recipientId: '1',
-      tabLabel: signHereTab.TAbLabel,
+      tabLabel: signHereTab.tabLabel,
       xPosition: signHereTab.xPosition,
       yPosition: signHereTab.yPosition
     })
