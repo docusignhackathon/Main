@@ -2,6 +2,8 @@ from flask import Flask, request, abort, jsonify
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from newsapi import NewsApiClient
 from flask_cors import CORS
+from dotenv import load_dotenv
+load_dotenv()
 
 def get_sentiment(paragraph=""):
     sid = SentimentIntensityAnalyzer()
@@ -9,7 +11,7 @@ def get_sentiment(paragraph=""):
     return ss["compound"]
 
 def get_news(query="climate"):
-    newsapi = NewsApiClient(api_key='')
+    newsapi = NewsApiClient(api_key=process.env.NEWS_API_KEY)
     news = newsapi.get_everything(q=query,
                                   language='en',
                                   sort_by='popularity',

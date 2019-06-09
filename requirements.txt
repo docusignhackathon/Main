@@ -2,3 +2,4 @@
   nltk
   newsapi-python
   flask_cors
+  python-dotenv
