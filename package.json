@@ -21,6 +21,7 @@
     "webpack-cli": "3"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "docusign-esign": "^4.3.0",
     "dotenv": "^8.0.0",
     "express": "4",

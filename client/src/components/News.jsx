@@ -1,13 +1,14 @@
 import React, { useLayoutEffect, useState } from 'react';
 
-const News = ({ category }) => {
+const News = ({ category, articles }) => {
   const [newsArticles, setNewsArticles] = useState([]);
   useLayoutEffect(() => {
     fetch(`http://1d70a7fb.ngrok.io/news?category=${category}&location=California`)
       .then(response => response.json()).then(setNewsArticles);
   });
+
   return (
-    <table>
+    <table className="px-md-5 table table-striped table-hover table-sm w-50 p-3">
       <thead>
         <tr>
           {['Title', 'Summary', 'Author', 'Sentiment', 'URL'].map(header =>

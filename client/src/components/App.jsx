@@ -9,7 +9,23 @@ class App extends Component {
     super(props);
     this.state = {
       zipcode: 1,
-      category: ''
+      category: '',
+      newsArticles: [
+        {
+          "url": "ipsem.com",
+          "summary": "dfksdjflkdsmflkdsfs",
+          "author": "Bob Ross",
+          "sentiment": "Delightful",
+          "title": "happy little trees"
+        },
+        {
+          "url": "ross.com",
+          "summary": "dfksdjflkdsmflkdsfs",
+          "author": "Not Bob Ross",
+          "sentiment": "Angry",
+          "title": "Angry little trees"
+        }
+      ]
     };
     this.addInfo = this.addInfo.bind(this);
   }
@@ -27,8 +43,8 @@ class App extends Component {
       <div>
         <h1>Get Involved!</h1>
         <Form addInfo={this.addInfo}/>
+        <News articles={this.state.newsArticles} category={this.state.category} />
         <DocuSign category={this.state.category} />
-        <News category={this.state.category} />
       </div>);
   }
 }
