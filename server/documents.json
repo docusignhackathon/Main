@@ -5,8 +5,25 @@
     "emailBlurb": "Please sign the Forest Petition!",
     "signHereTabs": [
       {
+        "type": "SignHere",
+        "tabLabel": "SignHereTab",
+        "xPosition": 100,
+        "yPosition": 1125
+      }
+    ],
+    "initialHereTabs": [
+      {
+        "type": "InitialHere",
         "tabLabel": "SignHereTab",
         "xPosition": 550,
+        "yPosition": 1125
+      }
+    ],
+    "fullNameTabs": [
+      {
+        "type": "FullName",
+        "tabLabel": "SignHereTab",
+        "xPosition": 250,
         "yPosition": 1125
       }
     ]

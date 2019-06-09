@@ -15,10 +15,12 @@ class App extends Component {
   }
 
   addInfo(info) {
-    this.setState({
-      zipcode: info.zipcode,
-      category: info.category
-    });
+    this.setState(
+      Object.assign({},
+        this.state,
+        { zipcode: info.zipcode, category: info.category }
+      )
+    );
   }
   render() {
     return (

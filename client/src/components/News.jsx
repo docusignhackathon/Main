@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 
 const News = ({ category }) => {
   const [newsArticles, setNewsArticles] = useState([]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     fetch(`http://1d70a7fb.ngrok.io/news?category=${category}&location=California`)
       .then(response => response.json()).then(setNewsArticles);
   });
@@ -10,21 +10,19 @@ const News = ({ category }) => {
     <table>
       <thead>
         <tr>
-          <th>Title</th>
-          <th>Summary</th>
-          <th>Author</th>
-          <th>Sentiment</th>
-          <th>URL</th>
+          {['Title', 'Summary', 'Author', 'Sentiment', 'URL'].map(header =>
+            <th>{header}</th>
+          )}
         </tr>
       </thead>
       <tbody>
-        {newsArticles.map(newsArticle =>
-          <tr key={newsArticle.url}>
-            <td>{newsArticle.title}</td>
-            <td>{newsArticle.summary}</td>
-            <td>{newsArticle.author}</td>
-            <td>{newsArticle.sentiment}</td>
-            <td>{newsArticle.url}</td>
+        {newsArticles.map(({url, title, summary, author, sentiment}) =>
+          <tr key={url}>
+            <td>{title}</td>
+            <td>{summary}</td>
+            <td>{author}</td>
+            <td>{sentiment}</td>
+            <td>{url}</td>
           </tr>
         )}
       </tbody>

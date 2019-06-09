@@ -64,8 +64,7 @@ async function SigningCeremony (body, res) {
     clientUserId: clientUserId
   });
 
-  // Create the signHere tab to be placed on the envelope
-  const signHereTabs = documentMetadata.signHereTabs.map(signHereTab =>
+  const buildSignHereTabs = signHereTab =>
     docusign.SignHere.constructFromObject({
       documentId: '1',
       pageNumber: '1',
@@ -73,12 +72,16 @@ async function SigningCeremony (body, res) {
       tabLabel: signHereTab.tabLabel,
       xPosition: signHereTab.xPosition,
       yPosition: signHereTab.yPosition
-    })
-  );
+    });
+  // Create the signHere tab to be placed on the envelope
+  const signHereTabs = documentMetadata.signHereTabs.map(buildSignHereTabs)
+  const initialHereTabs = documentMetadata.initialHereTabs.map(buildSignHereTabs)
+  const fullNameTabs = documentMetadata.fullNameTabs.map(buildSignHereTabs)
+
 
   // Create the overall tabs object for the signer and add the signHere tabs array
   // Note that tabs are relative to receipients/signers.
-  signer.tabs = docusign.Tabs.constructFromObject({signHereTabs: signHereTabs});
+  signer.tabs = docusign.Tabs.constructFromObject({signHereTabs: signHereTabs, initialHereTabs: initialHereTabs, fullNameTabs: fullNameTabs});
 
   // Add the recipients object to the envelope definition.
   // It includes an array of the signer objects.
