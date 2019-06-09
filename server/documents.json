@@ -1,13 +1,13 @@
 {
   "Forest": {
-    "fileName": "document_files/World_Wide_Corp_lorem.pdf",
+    "fileName": "document_files/Mockup Docusign Forest.pdf",
     "emailSubject": "Please sign the Forest Petition!",
     "emailBlurb": "Please sign the Forest Petition!",
     "signHereTabs": [
       {
         "tabLabel": "SignHereTab",
-        "xPosition": 195,
-        "yPosition": 147
+        "xPosition": 550,
+        "yPosition": 1125
       }
     ]
   },
@@ -20,6 +20,30 @@
         "tabLabel": "SignHereTab",
         "xPosition": 550,
         "yPosition": 1125
+      }
+    ]
+  },
+  "Climate": {
+    "fileName": "document_files/World_Wide_Corp_lorem.pdf",
+    "emailSubject": "Please sign the Climate Petition!",
+    "emailBlurb": "Please sign the Climate Petition!",
+    "signHereTabs": [
+      {
+        "tabLabel": "SignHereTab",
+        "xPosition": 195,
+        "yPosition": 147
+      }
+    ]
+  },
+  "Earth": {
+    "fileName": "document_files/World_Wide_Corp_lorem.pdf",
+    "emailSubject": "Please sign the Earth Petition!",
+    "emailBlurb": "Please sign the Earth Petition!",
+    "signHereTabs": [
+      {
+        "tabLabel": "SignHereTab",
+        "xPosition": 195,
+        "yPosition": 147
       }
     ]
   }
