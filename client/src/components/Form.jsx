@@ -6,7 +6,7 @@ class Form extends React.Component {
     this.state = {
       category: '',
       zipcode: 1,
-      options: ['Forest', 'Land', 'Climate', 'Earth']
+      options: ['Select', 'Forest', 'Land', 'Climate', 'Earth']
     };
 
     this.handleChange = this.handleChange.bind(this);
