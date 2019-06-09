@@ -24,7 +24,7 @@ class App extends Component {
       <div>
         <h1>Get Involved!</h1>
         <Form addInfo={this.addInfo}/>
-        <DocuSign />
+        <DocuSign category={this.addInfo.category || 'Forest'} />
       </div>);
   }
 }

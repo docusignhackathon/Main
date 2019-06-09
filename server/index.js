@@ -10,21 +10,12 @@ const pathToAssets = path.join(__dirname, '../client/dist');
 const staticAssetsMiddleware = express.static(pathToAssets);
 
 app.use(staticAssetsMiddleware);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get('/groceries', (req, res) => {
-  console.log('serving all the groceries');
-  res.status(200).send('all the groceries');
-});
-
-app.post('/groceries', (req, res) => {
-  console.log('saving a grocery');
-  res.sendStatus(201);
-});
-
-app.post('/docusign', SigningCeremony);
-app.get('/dsreturn', (req, res) => {
-  res.send(`<html lang="en"><body><p>The signing ceremony was completed with
-    status ${req.query.event}</p><p>This page can also implement post-signing processing.</p></body>`)
+app.post('/docusign', (req, res) => {
+  console.log(req.body);
+  return SigningCeremony(req.body, res);
 });
 
 app.listen(PORT, () => {

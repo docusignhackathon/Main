@@ -1,0 +1,26 @@
+{
+  "Forest": {
+    "fileName": "document_files/World_Wide_Corp_lorem.pdf",
+    "emailSubject": "Please sign the Forest Petition!",
+    "emailBlurb": "Please sign the Forest Petition!",
+    "signHereTabs": [
+      {
+        "tabLabel": "SignHereTab",
+        "xPosition": 195,
+        "yPosition": 147
+      }
+    ]
+  },
+  "Land": {
+    "fileName": "document_files/Mock Up Docusign.pdf",
+    "emailSubject": "Please sign the Land Petition!",
+    "emailBlurb": "Please sign the Land Petition!",
+    "signHereTabs": [
+      {
+        "tabLabel": "SignHereTab",
+        "xPosition": 550,
+        "yPosition": 1125
+      }
+    ]
+  }
+}

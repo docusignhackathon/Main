@@ -35,15 +35,12 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form
-        onSubmit={this.handleSubmit}
-      >
+      <form onSubmit={this.handleSubmit}>
         <label> Category
         <select onChange = {this.handleSelect}>
-          <option>Forest</option>
-          <option>Land</option>
-          <option>Climate</option>
-          <option>Earth</option>
+          {['Forest', 'Land', 'Climate', 'Earth'].map(option =>
+            <option key={option}>{option}</option>
+          )}
         </select>
         </label>
         <label> Zipcode
