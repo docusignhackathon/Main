@@ -5,7 +5,7 @@ const News = ({ category, zipcode, articles }) => {
   useLayoutEffect(() => {
     fetch(`http://localhost:5001/news?category=${category}&location=California`)
       .then(response => response.json()).then(setNewsArticles);
-  });
+  }, [category, zipcode]);
 
   return (
     <table className="table table-striped text-center">
