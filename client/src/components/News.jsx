@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useState } from 'react';
 const News = ({ category, zipcode, articles }) => {
   const [newsArticles, setNewsArticles] = useState([]);
   useLayoutEffect(() => {
-    fetch(`http://512ad1af.ngrok.io/news?category=${category}&location=California`)
+    fetch(`http://localhost:5001/news?category=${category}&location=California`)
       .then(response => response.json()).then(setNewsArticles);
   });
 

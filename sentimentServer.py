@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, abort, jsonify
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from newsapi import NewsApiClient
@@ -11,7 +12,7 @@ def get_sentiment(paragraph=""):
     return ss["compound"]
 
 def get_news(query="climate"):
-    newsapi = NewsApiClient(api_key=process.env.NEWS_API_KEY)
+    newsapi = NewsApiClient(api_key=os.getenv('NEWS_API_KEY'))
     news = newsapi.get_everything(q=query,
                                   language='en',
                                   sort_by='popularity',
